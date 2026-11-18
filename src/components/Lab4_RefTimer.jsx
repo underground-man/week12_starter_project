@@ -5,6 +5,7 @@ export default function Lab4RefTimer() {
   const [count, setCount] = useState(0);
   const [running, setRunning] = useState(false);
   const timerRef = useRef(null);
+  const formattedTime = `${String(Math.floor(count / 60)).padStart(2, '0')}:${String(count % 60).padStart(2, '0')}`;
 
   const start = () => {
     if (timerRef.current !== null) return;
@@ -34,6 +35,7 @@ export default function Lab4RefTimer() {
     <div>
       <p className="status">상태: {running ? 'Running' : 'Stopped'}</p>
       <div className="count">{count}</div>
+      <p className="elapsed">경과 시간: {formattedTime}</p>
       <div className="controls">
         <button onClick={start} disabled={running}>Start</button>
         <button className="secondary" onClick={stop} disabled={!running}>Stop</button>

@@ -69,3 +69,14 @@ LAB 2와 LAB 4의 Timer 관리 방식은 어떻게 다른가?
 
 답변
 LAB 2는 running State와 useEffect로 Timer를 관리한다. LAB 4는 Timer ID를 useRef에 저장하고 버튼 함수에서 직접 관리한다.
+
+Customizing
+
+App.jsx
+프로젝트 제목을 박찬의 React Hooks Lab으로 변경하고 설명을 수정했다.
+
+App.css
+전체 배경색, 활성 탭, 버튼 색상과 Lab 카드 그림자를 변경했다.
+
+Lab2_TimerControl.jsx, Lab4_RefTimer.jsx
+Count를 00:00 형식으로 보여 주는 경과 시간 표시를 추가했다.
