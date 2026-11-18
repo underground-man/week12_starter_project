@@ -1,5 +1,16 @@
 22300330 / 박찬
 
+
+GitHub URL
+
+https://github.com/2026-2-OSS/assign12-c02-22300330
+
+Vercel URL
+
+https://week12-starter-project-liard.vercel.app/
+
+
+
 질문 1
 App.jsx와 주요 Lab 컴포넌트의 역할은?
 
@@ -73,10 +84,59 @@ LAB 2는 running State와 useEffect로 Timer를 관리한다. LAB 4는 Timer ID�
 Customizing
 
 App.jsx
-프로젝트 제목을 박찬의 React Hooks Lab으로 변경하고 설명을 수정했다.
+프로젝트 제목을 변경. 
 
 App.css
 전체 배경색, 활성 탭, 버튼 색상과 Lab 카드 그림자를 변경했다.
 
 Lab2_TimerControl.jsx, Lab4_RefTimer.jsx
 Count를 00:00 형식으로 보여 주는 경과 시간 표시를 추가했다.
+
+Project Information
+
+이 프로젝트는 useEffect와 useRef의 동작을 이해하기 위한 React Hooks 실습 프로젝트이다. 4개의 Lab을 통해 Timer의 생성과 정리, 실행 상태 관리, Input DOM 접근, useRef를 이용한 Timer 제어를 구현했다.
+
+Starter Project
+
+https://github.com/2026-2-OSS/week12_starter_project
+
+
+
+실행 화면
+
+전체 실행 화면과 Lab 1부터 Lab 4까지의 실행 결과 이미지를 캡처한 후 추가한다.
+
+Lab 구현 내용과 결과
+
+Lab 1
+useEffect와 setInterval을 사용하여 Count가 1초마다 증가하도록 구현했다. Functional State Update를 사용하고 Cleanup에서 Timer를 제거했다.
+
+Lab 2
+running State와 useEffect를 사용하여 Start, Stop, Reset 기능을 구현했다. Cleanup을 사용하여 Timer의 중복 실행을 방지했다.
+
+Lab 3
+useRef로 Input DOM 요소를 참조했다. Focus 버튼은 입력창으로 Focus를 이동하고 Clear 버튼은 입력값을 지운 후 다시 Focus를 이동한다.
+
+Lab 4
+Timer ID를 useRef에 저장하여 Start, Stop, Reset 기능을 구현했다. 중복 Start를 막고 컴포넌트가 사라질 때 Timer를 정리했다.
+
+
+
+새롭게 배운 내용
+
+첫째, useState말고도 다른 
+둘째, Cleanup을 사용해야 Timer와 같은 외부 작업이 중복되거나 남아 있는 문제를 막을 수 있다는 것을 배웠다.
+셋째, useState는 값이 바뀌면 다시 렌더링되지만 useRef의 값 변경은 다시 렌더링되지 않는다는 것을 배웠다.
+
+어려웠던 점과 해결 방법
+ Lab 4에서timerRef.current를 확인하지 않아 중복 실행되어서 수정하였다.
+
+AI 활용 내용과 느낀 점
+
+AI를 활용하여 useEffect와 useRef의 차이를 이해하고 TODO 코드 구현과 오류 확인에 도움을 받았다.
+생성된 코드를 그대로 사용하기보다 각 코드가 어떤 역할을 하는지 확인하면서 적용했다.
+AI는 빠르게 방향을 찾는 데 도움이 되었지만 최종 동작은 직접 확인해야 한다고 느꼈다.
+
+
+
+
